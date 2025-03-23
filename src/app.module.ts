@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { ProdService } from './data/services/prod.service';
+import { DevService } from './data/services/dev.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AuthModule } from './auth/auth.module';
@@ -15,7 +16,7 @@ import { Produto } from './produto/entities/produto.entity';
   imports: [
     ConfigModule.forRoot(),
     TypeOrmModule.forRootAsync({
-      useClass: ProdService,
+      useClass: DevService,
         imports: [ConfigModule],
     }),
     ProdutoModule,
