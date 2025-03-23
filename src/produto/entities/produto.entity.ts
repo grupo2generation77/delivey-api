@@ -34,7 +34,7 @@ export class Produto {
   @ApiProperty()
   calorias: number;
 
-  @IsPositive()
+  /*@IsPositive()*/
   @Column({ type: 'boolean' })
   @ApiProperty()
   artesanal: boolean;
