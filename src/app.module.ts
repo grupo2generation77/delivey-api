@@ -16,7 +16,7 @@ import { Produto } from './produto/entities/produto.entity';
   imports: [
     ConfigModule.forRoot(),
     TypeOrmModule.forRootAsync({
-      useClass: DevService,
+      useClass: ProdService,
         imports: [ConfigModule],
     }),
     ProdutoModule,
